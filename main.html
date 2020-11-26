@@ -1,0 +1,32 @@
+<html>
+<body>
+    <label>Please Enter Number</label><br/><br/>
+    <input type="text" id = "number"><br/><br/>
+    <input type="button" id ="question" value="Question"><br/><br/>
+    <label type="text" id = "result"></label><br/><br/>
+    <script>
+        var rnd_sayi = Math.floor(Math.random()*100)+1;
+        var gelen_sayi = document.getElementById("number");
+        var sorgu_btn = document.getElementById("question")
+        var sonuc = document.getElementById("result")       
+        sorgu_btn.onclick=function()
+        {
+
+            if (Number(gelen_sayi.value)==rnd_sayi)
+            {
+                sonuc.innerHTML="You WIN";
+            }
+            else if (Number(gelen_sayi.value)<rnd_sayi)
+            {
+                sonuc.innerHTML="You guessed too small!";
+            }
+            else if (Number(gelen_sayi.value)>rnd_sayi)
+            {
+                sonuc.innerHTML="You guessed too high!";
+            }
+            
+        }  
+    </script>
+    
+    </body>
+</html>
